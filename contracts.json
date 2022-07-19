@@ -1,6 +1,14 @@
 {
   "contracts": [
     {
+      "contract_name": "fa2",
+      "original_format": "kT1",
+      "original_kt1": [
+        "KT1ATZMPus96CFMg2s7mHp33bVkHwwpRDS3R",
+        "ithacanet"
+      ]
+    },
+    {
       "contract_name": "imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221",
       "original_format": "kT1",
       "original_kt1": [
