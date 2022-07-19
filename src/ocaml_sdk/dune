@@ -1,6 +1,11 @@
 (env (_ (flags (:standard -w +a-4-40-41-42-44-45-48-70-53-33 -warn-error -a))))
 
 (library
+(name fa12_ocaml_interface)
+(modules fa12_code fa12_ocaml_interface)
+(libraries factori_types blockchain tzfunc ez_api.icurl_lwt lwt.unix))
+
+(library
 (name imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface)
 (modules imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_code imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface)
 (libraries factori_types blockchain tzfunc ez_api.icurl_lwt lwt.unix))

@@ -1,6 +1,14 @@
 {
   "contracts": [
     {
+      "contract_name": "fa12",
+      "original_format": "kT1",
+      "original_kt1": [
+        "KT1LwPxVGwMAugQBtA7rz9CcNpbGsMyWraz8",
+        "mainnet"
+      ]
+    },
+    {
       "contract_name": "fa2",
       "original_format": "kT1",
       "original_kt1": [

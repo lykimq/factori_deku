@@ -4,4 +4,4 @@
 (executable
 (name scenario)
 (modules scenario)
-(libraries imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface blockchain utils ez_api.icurl_lwt lwt.unix))
+(libraries fa12_ocaml_interface imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface blockchain utils ez_api.icurl_lwt lwt.unix))

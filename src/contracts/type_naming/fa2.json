@@ -1,0 +1,1289 @@
+[
+  {
+    "name": "type2",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "from_",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "txs",
+              {
+                "list": {
+                  "tvar": [
+                    "type1",
+                    {
+                      "record": {
+                        "PairP": [
+                          {
+                            "LeafP": [
+                              "to_",
+                              {
+                                "base": "address"
+                              }
+                            ]
+                          },
+                          {
+                            "LeafP": [
+                              "token_id",
+                              {
+                                "base": "nat"
+                              }
+                            ]
+                          },
+                          {
+                            "LeafP": [
+                              "amount",
+                              {
+                                "base": "nat"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "tokens",
+    "type": {
+      "or": [
+        {
+          "annot": [
+            {
+              "list": {
+                "record": {
+                  "PairP": [
+                    {
+                      "LeafP": [
+                        "owner",
+                        {
+                          "base": "address"
+                        }
+                      ]
+                    },
+                    {
+                      "LeafP": [
+                        "amount",
+                        {
+                          "base": "nat"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "%burn_tokens"
+          ]
+        },
+        {
+          "annot": [
+            {
+              "list": {
+                "record": {
+                  "PairP": [
+                    {
+                      "LeafP": [
+                        "owner",
+                        {
+                          "base": "address"
+                        }
+                      ]
+                    },
+                    {
+                      "LeafP": [
+                        "amount",
+                        {
+                          "base": "nat"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            },
+            "%mint_tokens"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "type3",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "owner",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "amount",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "assets6",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "PairP": [
+              {
+                "PairP": [
+                  {
+                    "LeafP": [
+                      "ledger",
+                      {
+                        "bigmap": [
+                          {
+                            "base": "address"
+                          },
+                          {
+                            "base": "nat"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "operators",
+                      {
+                        "bigmap": [
+                          {
+                            "pair": [
+                              {
+                                "base": "address"
+                              },
+                              {
+                                "pair": [
+                                  {
+                                    "base": "address"
+                                  },
+                                  {
+                                    "base": "nat"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "base": "unit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "PairP": [
+                  {
+                    "LeafP": [
+                      "permissions",
+                      {
+                        "tvar": [
+                          "permissions",
+                          {
+                            "record": {
+                              "PairP": [
+                                {
+                                  "LeafP": [
+                                    "operator",
+                                    {
+                                      "tvar": [
+                                        "operator",
+                                        {
+                                          "or": [
+                                            {
+                                              "annot": [
+                                                {
+                                                  "base": "unit"
+                                                },
+                                                "no_transfer"
+                                              ]
+                                            },
+                                            [
+                                              {
+                                                "annot": [
+                                                  {
+                                                    "base": "unit"
+                                                  },
+                                                  "owner_transfer"
+                                                ]
+                                              },
+                                              {
+                                                "annot": [
+                                                  {
+                                                    "base": "unit"
+                                                  },
+                                                  "owner_or_operator_transfer"
+                                                ]
+                                              }
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "LeafP": [
+                                    "receiver",
+                                    {
+                                      "tvar": [
+                                        "sender",
+                                        {
+                                          "or": [
+                                            {
+                                              "annot": [
+                                                {
+                                                  "base": "unit"
+                                                },
+                                                "owner_no_hook"
+                                              ]
+                                            },
+                                            [
+                                              {
+                                                "annot": [
+                                                  {
+                                                    "base": "unit"
+                                                  },
+                                                  "optional_owner_hook"
+                                                ]
+                                              },
+                                              {
+                                                "annot": [
+                                                  {
+                                                    "base": "unit"
+                                                  },
+                                                  "required_owner_hook"
+                                                ]
+                                              }
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "LeafP": [
+                                    "sender",
+                                    {
+                                      "tvar": [
+                                        "sender",
+                                        {
+                                          "or": [
+                                            {
+                                              "annot": [
+                                                {
+                                                  "base": "unit"
+                                                },
+                                                "owner_no_hook"
+                                              ]
+                                            },
+                                            [
+                                              {
+                                                "annot": [
+                                                  {
+                                                    "base": "unit"
+                                                  },
+                                                  "optional_owner_hook"
+                                                ]
+                                              },
+                                              {
+                                                "annot": [
+                                                  {
+                                                    "base": "unit"
+                                                  },
+                                                  "required_owner_hook"
+                                                ]
+                                              }
+                                            ]
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "LeafP": [
+                                    "custom",
+                                    {
+                                      "option": {
+                                        "tvar": [
+                                          "custom",
+                                          {
+                                            "record": {
+                                              "PairP": [
+                                                {
+                                                  "LeafP": [
+                                                    "tag",
+                                                    {
+                                                      "base": "string"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "LeafP": [
+                                                    "config_api",
+                                                    {
+                                                      "option": {
+                                                        "base": "address"
+                                                      }
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "token_metadata",
+                      {
+                        "bigmap": [
+                          {
+                            "base": "nat"
+                          },
+                          {
+                            "tvar": [
+                              "type5",
+                              {
+                                "record": {
+                                  "PairP": [
+                                    {
+                                      "LeafP": [
+                                        "token_id",
+                                        {
+                                          "base": "nat"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "LeafP": [
+                                        "token_info",
+                                        {
+                                          "map": [
+                                            {
+                                              "base": "string"
+                                            },
+                                            {
+                                              "base": "byte"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "total_supply",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "type5",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "token_id",
+              {
+                "base": "nat"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "token_info",
+              {
+                "map": [
+                  {
+                    "base": "string"
+                  },
+                  {
+                    "base": "byte"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "admin7",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "admin",
+                  {
+                    "base": "address"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "paused",
+                  {
+                    "base": "bool"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "pending_admin",
+              {
+                "option": {
+                  "base": "address"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "type1",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "to_",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "token_id",
+              {
+                "base": "nat"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "amount",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "type0",
+    "type": {
+      "or": [
+        {
+          "annot": [
+            {
+              "record": {
+                "PairP": [
+                  {
+                    "LeafP": [
+                      "owner",
+                      {
+                        "base": "address"
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "operator",
+                      {
+                        "base": "address"
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "token_id",
+                      {
+                        "base": "nat"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "%add_operator"
+          ]
+        },
+        {
+          "annot": [
+            {
+              "record": {
+                "PairP": [
+                  {
+                    "LeafP": [
+                      "owner",
+                      {
+                        "base": "address"
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "operator",
+                      {
+                        "base": "address"
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "token_id",
+                      {
+                        "base": "nat"
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "%remove_operator"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "sender",
+    "type": {
+      "or": [
+        {
+          "annot": [
+            {
+              "base": "unit"
+            },
+            "owner_no_hook"
+          ]
+        },
+        [
+          {
+            "annot": [
+              {
+                "base": "unit"
+              },
+              "optional_owner_hook"
+            ]
+          },
+          {
+            "annot": [
+              {
+                "base": "unit"
+              },
+              "required_owner_hook"
+            ]
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "name": "operator",
+    "type": {
+      "or": [
+        {
+          "annot": [
+            {
+              "base": "unit"
+            },
+            "no_transfer"
+          ]
+        },
+        [
+          {
+            "annot": [
+              {
+                "base": "unit"
+              },
+              "owner_transfer"
+            ]
+          },
+          {
+            "annot": [
+              {
+                "base": "unit"
+              },
+              "owner_or_operator_transfer"
+            ]
+          }
+        ]
+      ]
+    }
+  },
+  {
+    "name": "admin",
+    "type": {
+      "or": [
+        [
+          {
+            "annot": [
+              {
+                "base": "unit"
+              },
+              "confirm_admin"
+            ]
+          },
+          {
+            "annot": [
+              {
+                "base": "bool"
+              },
+              "pause"
+            ]
+          }
+        ],
+        {
+          "annot": [
+            {
+              "base": "address"
+            },
+            "set_admin"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "permissions",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "operator",
+              {
+                "tvar": [
+                  "operator",
+                  {
+                    "or": [
+                      {
+                        "annot": [
+                          {
+                            "base": "unit"
+                          },
+                          "no_transfer"
+                        ]
+                      },
+                      [
+                        {
+                          "annot": [
+                            {
+                              "base": "unit"
+                            },
+                            "owner_transfer"
+                          ]
+                        },
+                        {
+                          "annot": [
+                            {
+                              "base": "unit"
+                            },
+                            "owner_or_operator_transfer"
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "receiver",
+              {
+                "tvar": [
+                  "sender",
+                  {
+                    "or": [
+                      {
+                        "annot": [
+                          {
+                            "base": "unit"
+                          },
+                          "owner_no_hook"
+                        ]
+                      },
+                      [
+                        {
+                          "annot": [
+                            {
+                              "base": "unit"
+                            },
+                            "optional_owner_hook"
+                          ]
+                        },
+                        {
+                          "annot": [
+                            {
+                              "base": "unit"
+                            },
+                            "required_owner_hook"
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "sender",
+              {
+                "tvar": [
+                  "sender",
+                  {
+                    "or": [
+                      {
+                        "annot": [
+                          {
+                            "base": "unit"
+                          },
+                          "owner_no_hook"
+                        ]
+                      },
+                      [
+                        {
+                          "annot": [
+                            {
+                              "base": "unit"
+                            },
+                            "optional_owner_hook"
+                          ]
+                        },
+                        {
+                          "annot": [
+                            {
+                              "base": "unit"
+                            },
+                            "required_owner_hook"
+                          ]
+                        }
+                      ]
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "custom",
+              {
+                "option": {
+                  "tvar": [
+                    "custom",
+                    {
+                      "record": {
+                        "PairP": [
+                          {
+                            "LeafP": [
+                              "tag",
+                              {
+                                "base": "string"
+                              }
+                            ]
+                          },
+                          {
+                            "LeafP": [
+                              "config_api",
+                              {
+                                "option": {
+                                  "base": "address"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "add_operator",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "owner",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "operator",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "token_id",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "assets",
+    "type": {
+      "or": [
+        [
+          {
+            "annot": [
+              {
+                "record": {
+                  "PairP": [
+                    {
+                      "LeafP": [
+                        "requests",
+                        {
+                          "list": {
+                            "record": {
+                              "PairP": [
+                                {
+                                  "LeafP": [
+                                    "owner",
+                                    {
+                                      "base": "address"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "LeafP": [
+                                    "token_id",
+                                    {
+                                      "base": "nat"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "LeafP": [
+                        "callback",
+                        {
+                          "contract": {
+                            "prim": "list",
+                            "args": [
+                              {
+                                "prim": "pair",
+                                "args": [
+                                  {
+                                    "prim": "pair",
+                                    "args": [
+                                      {
+                                        "prim": "address",
+                                        "annots": [
+                                          "%owner"
+                                        ]
+                                      },
+                                      {
+                                        "prim": "nat",
+                                        "annots": [
+                                          "%token_id"
+                                        ]
+                                      }
+                                    ],
+                                    "annots": [
+                                      "%request"
+                                    ]
+                                  },
+                                  {
+                                    "prim": "nat",
+                                    "annots": [
+                                      "%balance"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              "%balance_of"
+            ]
+          },
+          {
+            "annot": [
+              {
+                "list": {
+                  "record": {
+                    "PairP": [
+                      {
+                        "LeafP": [
+                          "from_",
+                          {
+                            "base": "address"
+                          }
+                        ]
+                      },
+                      {
+                        "LeafP": [
+                          "txs",
+                          {
+                            "list": {
+                              "record": {
+                                "PairP": [
+                                  {
+                                    "LeafP": [
+                                      "to_",
+                                      {
+                                        "base": "address"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "LeafP": [
+                                      "token_id",
+                                      {
+                                        "base": "nat"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "LeafP": [
+                                      "amount",
+                                      {
+                                        "base": "nat"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              },
+              "%transfer"
+            ]
+          }
+        ],
+        {
+          "annot": [
+            {
+              "list": {
+                "or": [
+                  {
+                    "annot": [
+                      {
+                        "record": {
+                          "PairP": [
+                            {
+                              "LeafP": [
+                                "owner",
+                                {
+                                  "base": "address"
+                                }
+                              ]
+                            },
+                            {
+                              "LeafP": [
+                                "operator",
+                                {
+                                  "base": "address"
+                                }
+                              ]
+                            },
+                            {
+                              "LeafP": [
+                                "token_id",
+                                {
+                                  "base": "nat"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "%add_operator"
+                    ]
+                  },
+                  {
+                    "annot": [
+                      {
+                        "record": {
+                          "PairP": [
+                            {
+                              "LeafP": [
+                                "owner",
+                                {
+                                  "base": "address"
+                                }
+                              ]
+                            },
+                            {
+                              "LeafP": [
+                                "operator",
+                                {
+                                  "base": "address"
+                                }
+                              ]
+                            },
+                            {
+                              "LeafP": [
+                                "token_id",
+                                {
+                                  "base": "nat"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      },
+                      "%remove_operator"
+                    ]
+                  }
+                ]
+              }
+            },
+            "%update_operators"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "type4",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "owner",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "token_id",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "balance_of",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "requests",
+              {
+                "list": {
+                  "tvar": [
+                    "type4",
+                    {
+                      "record": {
+                        "PairP": [
+                          {
+                            "LeafP": [
+                              "owner",
+                              {
+                                "base": "address"
+                              }
+                            ]
+                          },
+                          {
+                            "LeafP": [
+                              "token_id",
+                              {
+                                "base": "nat"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "callback",
+              {
+                "contract": {
+                  "prim": "list",
+                  "args": [
+                    {
+                      "prim": "pair",
+                      "args": [
+                        {
+                          "prim": "pair",
+                          "args": [
+                            {
+                              "prim": "address",
+                              "annots": [
+                                "%owner"
+                              ]
+                            },
+                            {
+                              "prim": "nat",
+                              "annots": [
+                                "%token_id"
+                              ]
+                            }
+                          ],
+                          "annots": [
+                            "%request"
+                          ]
+                        },
+                        {
+                          "prim": "nat",
+                          "annots": [
+                            "%balance"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "custom",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "tag",
+              {
+                "base": "string"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "config_api",
+              {
+                "option": {
+                  "base": "address"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

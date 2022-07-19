@@ -4,6 +4,21 @@
   },
   {
     "kind": "library",
+    "name": "fa12_ocaml_interface",
+    "modules": [
+      "fa12_code",
+      "fa12_ocaml_interface"
+    ],
+    "libraries": [
+      "factori_types",
+      "blockchain",
+      "tzfunc",
+      "ez_api.icurl_lwt",
+      "lwt.unix"
+    ]
+  },
+  {
+    "kind": "library",
     "name": "imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface",
     "modules": [
       "imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_code",

@@ -1,0 +1,203 @@
+[
+  {
+    "name": "type1",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "token_id",
+              {
+                "base": "nat"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "token_info",
+              {
+                "map": [
+                  {
+                    "base": "string"
+                  },
+                  {
+                    "base": "byte"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "update_metadata",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "key",
+              {
+                "base": "string"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "value",
+              {
+                "base": "byte"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "approve",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "spender",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "value",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "mint",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "address",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "value",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "transfer",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "from",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "_to",
+                  {
+                    "base": "address"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "value",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "type2",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "approvals",
+              {
+                "map": [
+                  {
+                    "base": "address"
+                  },
+                  {
+                    "base": "nat"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "balance",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "type0",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "owner",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "spender",
+              {
+                "base": "address"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

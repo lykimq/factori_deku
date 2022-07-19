@@ -1,4 +1,5 @@
 open Imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface
+open Fa12_ocaml_interface
 let initial_storage_imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221 =
 {admin = "KT1Kfu13FmNbcZSjTPZLrAUbEYNZim6vtg6d";
 lpFee = Z.of_string ("400");
@@ -19,4 +20,16 @@ token2_pool = Z.of_string ("6699483272");
 totalSupply = Z.of_string ("31675818702622933")}
 (*
  {"prim":"Pair","args":[{"prim":"Pair","args":[{"prim":"Pair","args":[{"prim":"Pair","args":[{"string":"KT1Kfu13FmNbcZSjTPZLrAUbEYNZim6vtg6d"},{"int":"400"}]},{"string":"KT1VDSyTqS95wkB4tRGy6saMa4izRKwrEg26"},{"int":"40"}]},{"prim":"Pair","args":[{"prim":"False"},{"int":"1000"}]},{"string":"KT1GRSvLoikDsXujKgZPsGLX8k8VvR2Tq95b"},{"prim":"False"}]},{"prim":"Pair","args":[{"prim":"Pair","args":[{"int":"0"},{"int":"439019453721214419051"}]},{"int":"158148808677571999947479"},{"string":"KT193D4vozYnhGJQVtw7CoxxqphqUEEwK6Vb"}]},{"prim":"Pair","args":[{"prim":"True"},{"int":"0"}]},{"int":"23118286"},{"int":"6699483272"},{"int":"31675818702622933"}]}
+*)
+
+
+let initial_storage_fa12 =
+{administrator = "tz1W18LSYogRApX5MBnsr7KupHEc9rC8vDvz";
+balances = Abstract (Z.of_string ("109015"));
+metadata = Abstract (Z.of_string ("109016"));
+paused = false;
+token_metadata = Abstract (Z.of_string ("109017"));
+totalSupply = Z.of_string ("1000000")}
+(*
+ {"prim":"Pair","args":[{"prim":"Pair","args":[{"string":"tz1W18LSYogRApX5MBnsr7KupHEc9rC8vDvz"},{"int":"109015"},{"int":"109016"}]},{"prim":"False"},{"int":"109017"},{"int":"1000000"}]}
 *)
