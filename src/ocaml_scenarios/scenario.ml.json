@@ -1,0 +1,14 @@
+{
+  "open_modules": {
+    "module_names": [
+      "imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221_ocaml_interface"
+    ]
+  },
+  "body": [
+    {
+      "name": "initial_storage_imported_KT1NtsnKQ1c3rYB12ZToP77XaJs8WDBvF221",
+      "args": [],
+      "content": "{admin = \"KT1Kfu13FmNbcZSjTPZLrAUbEYNZim6vtg6d\";\nlpFee = Z.of_string (\"400\");\nlpTokenAddress = \"KT1VDSyTqS95wkB4tRGy6saMa4izRKwrEg26\";\nmaxSwapLimit = Z.of_string (\"40\");\npaused = false;\nsystemFee = Z.of_string (\"1000\");\ntoken1Address = \"KT1GRSvLoikDsXujKgZPsGLX8k8VvR2Tq95b\";\ntoken1Check = false;\ntoken1Id = Z.of_string (\"0\");\ntoken1_Fee = Z.of_string (\"439019453721214419051\");\ntoken1_pool = Z.of_string (\"158148808677571999947479\");\ntoken2Address = \"KT193D4vozYnhGJQVtw7CoxxqphqUEEwK6Vb\";\ntoken2Check = true;\ntoken2Id = Z.of_string (\"0\");\ntoken2_Fee = Z.of_string (\"23118286\");\ntoken2_pool = Z.of_string (\"6699483272\");\ntotalSupply = Z.of_string (\"31675818702622933\")}\n(*\n {\"prim\":\"Pair\",\"args\":[{\"prim\":\"Pair\",\"args\":[{\"prim\":\"Pair\",\"args\":[{\"prim\":\"Pair\",\"args\":[{\"string\":\"KT1Kfu13FmNbcZSjTPZLrAUbEYNZim6vtg6d\"},{\"int\":\"400\"}]},{\"string\":\"KT1VDSyTqS95wkB4tRGy6saMa4izRKwrEg26\"},{\"int\":\"40\"}]},{\"prim\":\"Pair\",\"args\":[{\"prim\":\"False\"},{\"int\":\"1000\"}]},{\"string\":\"KT1GRSvLoikDsXujKgZPsGLX8k8VvR2Tq95b\"},{\"prim\":\"False\"}]},{\"prim\":\"Pair\",\"args\":[{\"prim\":\"Pair\",\"args\":[{\"int\":\"0\"},{\"int\":\"439019453721214419051\"}]},{\"int\":\"158148808677571999947479\"},{\"string\":\"KT193D4vozYnhGJQVtw7CoxxqphqUEEwK6Vb\"}]},{\"prim\":\"Pair\",\"args\":[{\"prim\":\"True\"},{\"int\":\"0\"}]},{\"int\":\"23118286\"},{\"int\":\"6699483272\"},{\"int\":\"31675818702622933\"}]}\n*)\n"
+    }
+  ]
+}

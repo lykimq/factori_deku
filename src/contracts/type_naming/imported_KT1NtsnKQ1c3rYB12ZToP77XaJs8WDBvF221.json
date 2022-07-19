@@ -1,0 +1,223 @@
+[
+  {
+    "name": "removeLiquidity",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "lpAmount",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "recipient",
+                  {
+                    "base": "address"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "token1_min",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "token2_min",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "swap",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "minimumTokenOut",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "recipient",
+                  {
+                    "base": "address"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "requiredTokenAddress",
+                  {
+                    "base": "address"
+                  }
+                ]
+              },
+              {
+                "PairP": [
+                  {
+                    "LeafP": [
+                      "requiredTokenId",
+                      {
+                        "base": "nat"
+                      }
+                    ]
+                  },
+                  {
+                    "LeafP": [
+                      "tokenAmountIn",
+                      {
+                        "base": "nat"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "modifyFee",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "lpFee",
+              {
+                "base": "nat"
+              }
+            ]
+          },
+          {
+            "LeafP": [
+              "systemFee",
+              {
+                "base": "nat"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "addLiquidity",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "LeafP": [
+              "recipient",
+              {
+                "base": "address"
+              }
+            ]
+          },
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "token1_max",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "token2_max",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "type0",
+    "type": {
+      "record": {
+        "PairP": [
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "token1Address",
+                  {
+                    "base": "address"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "token1Id",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "PairP": [
+              {
+                "LeafP": [
+                  "token2Address",
+                  {
+                    "base": "address"
+                  }
+                ]
+              },
+              {
+                "LeafP": [
+                  "token2Id",
+                  {
+                    "base": "nat"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
